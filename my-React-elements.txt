@@ -1,0 +1,63 @@
+// Our HyperionDev link
+import React from "react";
+import ReactDOM from "react-dom";
+
+function App() {
+  // Render our link
+  return <a href="https://www.hyperiondev.com/">HyperionDev</a>;
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+
+
+
+// Our timer
+import React from "react";
+import ReactDOM from "react-dom";
+
+// Define a function to update time
+const updateTime = () => {
+  // Get hours, minutes and seconds right now
+  const today = new Date();
+  const h = today.getHours(),
+    m = today.getMinutes(),
+    s = today.getSeconds();
+
+  // Display our time in format "hh:mm:ss"
+  return `${h}:${m}:${s}`;
+};
+
+function App() {
+  // Update time every 1 second
+  setInterval(() => {
+    document.getElementById("currentDate").innerText = updateTime();
+  }, 1000);
+
+  // Render our div with current time
+  return <div id="currentDate">{updateTime()}</div>;
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+
+
+
+// Our MERN stack displayer
+import React from "react";
+import ReactDOM from "react-dom";
+
+function App() {
+  const stack = ["MongoDB", "Express.JS", "React.JS", "Node.JS"]
+
+  return (
+    <ul>
+      {stack.map(item => <li>{item}</li>)}
+    </ul>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
